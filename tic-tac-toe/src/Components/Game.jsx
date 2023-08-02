@@ -108,9 +108,8 @@ const Game = () => {
             </table>
         </div>
  
-        <div >
+        <div className='play' >
         <button onClick={()=>(handlereset())}>Play Again</button>
-         
             { winner &&( <p>winner is {winner} </p>) }
         </div>
             
