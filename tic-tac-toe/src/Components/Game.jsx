@@ -79,7 +79,7 @@ const Game = () => {
 
 
     return (
-       <><div className='wel' > <h2>Welcome to tic-tac-toe Game</h2></div>
+       <><div className='wel' > <h2>Welcome to Tic Tac Toe Game</h2></div>
          
         <div className='my-game'>
               <div className='turn'><h2>turn : # {turn}</h2></div>
@@ -107,10 +107,10 @@ const Game = () => {
                 </tbody>
             </table>
         </div>
-        <button onClick={()=>(handlereset())}>Play Again</button>
-          
+ 
         <div >
-        
+        <button onClick={()=>(handlereset())}>Play Again</button>
+         
             { winner &&( <p>winner is {winner} </p>) }
         </div>
             
