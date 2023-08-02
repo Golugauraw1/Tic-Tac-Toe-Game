@@ -52,7 +52,7 @@ const Game = () => {
     }
     
     const Box = ({ val }) => {
-        return <td onClick={() => handleclick(val)}>{box[val]}</td>
+        return <td className="main-td" onClick={() => handleclick(val)}>{box[val]}</td>
     };
 
     const handleclick = (val) => {
@@ -79,40 +79,44 @@ const Game = () => {
 
 
     return (
-
+       <><div className='wel' > <h2>Welcome to tic-tac-toe Game</h2></div>
+         
+        <div className='my-game'>
+              <div className='turn'><h2>turn : # {turn}</h2></div>
         <div className='game'>
             <table>
                 <tbody>
-                    <tr>
-                        <Box val={0} />
-                        <Box val={1} />
-                        <Box val={2} />
+                    <tr >
+                       <td className='m1'> <Box  val={0} /></td>
+                       <td className='m2'> <Box val={1} /></td>
+                       <td className='m3'> <Box val={2} /></td>
 
                     </tr>
                     <tr>
-                        <Box val={3} />
-                        <Box val={4} />
-                        <Box val={5} />
+                    <td className='N1'>  <Box val={3} /></td>
+                    <td className='N2'>  <Box val={4} /></td>
+                    <td className='N3'>  <Box val={5} /></td>
 
                     </tr>
                     <tr>
-                        <Box val={6} />
-                        <Box val={7} />
-                        <Box val={8} />
+                       <td className='O1' ><Box val={6} /> </td>
+                       <td className='O2' > <Box val={7} /></td>
+                       <td className='O3'>  <Box val={8} /> </td>
 
                     </tr>
                 </tbody>
             </table>
-            <div><p>turn{turn}</p></div>
-            <div>
-            { winner &&( <p>winner is{winner}</p>) }
-            </div>
-            
-           
-            <button onClick={()=>(handlereset())}>Play Again</button>
-            
-
         </div>
+        <button onClick={()=>(handlereset())}>Play Again</button>
+          
+        <div >
+        
+            { winner &&( <p>winner is {winner} </p>) }
+        </div>
+            
+            
+        </div>
+        </>
     )
 }
 
